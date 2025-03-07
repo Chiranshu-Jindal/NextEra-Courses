@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+
+
+body {
+	background-color: #ffffff; /* White background for the entire page */
+}
+
+/* Primary background for navigation and other components */
+.primary-background {
+	background: #78909C !important;
+}
+
+/* Partner logos container adjustments */
+.partner-logos-container {
+	background-color: #f0f0f0; /* Light grey background */
+	padding: 40px 0;
+	/* Adding more padding for spacing around the section */
+	text-align: center;
+	margin-top: 0;
+	/* Removed top margin to eliminate space between banner and logos */
+	margin-bottom: 30px;
+	/* Added bottom margin to add space between logos and the cards below */
+	width: 100%;
+}
+
+/* Fixing alignment issues for the logos */
+.partner-logo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	/* Adjusted for larger logos and better fit */
+	gap: 20px; /* Adjusted gap between logos */
+	justify-items: center; /* Ensure all items are centered */
+	padding: 0 15px;
+	/* Padding on the sides to add space between grid and container edges */
+	margin: 0 auto; /* Center the grid container */
+	max-width: 1200px; /* Limit the grid width for better alignment */
+}
+
+/* Adjust the logos within each grid cell */
+.partner-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 220px; /* Increase max-width to fit larger logos */
+	padding-left: 10px;
+	/* Optional: Ensure the first image doesn't stick to the left edge */
+	padding-right: 10px;
+	/* Optional: Ensure the last image doesn't stick to the right edge */
+}
+
+.partner-logo img {
+	max-height: 50px;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+/* Responsive Design for smaller screens */
+@media ( max-width : 600px) {
+	.partner-logo-grid {
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		/* Adjust for smaller screens */
+		padding: 0 10px; /* Less padding on smaller screens */
+	}
+	.partner-logo img {
+		max-height: 40px;
+	}
+	.partner-logos-container h2 {
+		font-size: 20px;
+	}
+}
